@@ -583,6 +583,21 @@ On a 10,000-transaction synthetic benchmark, PayShield achieved 97.94% accuracy 
 
 Important: These are synthetic benchmark and prototype simulation results. They are not claims of actual Razorpay or real-world merchant savings.
 
+### Reproducible Testing
+
+The complete synthetic evaluation environment is available in the
+[`testing/`](./testing/) directory.
+
+It includes:
+- `generate_dataset.py` — generates the 10,000 synthetic transactions
+- `evaluate_model.py` — evaluates the PayShield risk engine
+- `synthetic_10k.csv` — synthetic benchmark dataset
+- `results/evaluation_report.txt` — complete evaluation report
+
+The benchmark uses the same risk weights and decision thresholds as
+the PayShield production risk engine.
+
+
 ⭐ 15 Core Capabilities
 
 PayShield's architecture covers 15 major capabilities:
