@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PayShield AI | Merchant Risk Intelligence</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-mark">P</div>
+
+            <div>
+                <div class="brand-name">
+                    Pay<span>Shield</span>
+                </div>
+
+                <div class="brand-subtitle">
+                    AI Risk Intelligence
+                </div>
+            </div>
+        </div>
+
+
+        <div class="nav-section-title">
+            CONTROL CENTER
+        </div>
+
+        <nav class="nav">
+
+            <a class="nav-item active" href="#overview">
+                <span>⌂</span>
+                Overview
+            </a>
+
+            <a class="nav-item" href="#agent">
+                <span>◈</span>
+                Autonomous Agent
+            </a>
+
+            <a class="nav-item" href="#investigation">
+                <span>⌕</span>
+                Investigation
+            </a>
+
+            <a class="nav-item" href="#intelligence">
+                <span>◉</span>
+                Risk Intelligence
+            </a>
+
+            <a class="nav-item" href="#decision">
+                <span>◆</span>
+                Decision Engine
+            </a>
+
+            <a class="nav-item" href="#recovery">
+                <span>↻</span>
+                Recovery & Learning
+            </a>
+
+            <a class="nav-item" href="#network">
+                <span>◎</span>
+                Network Intelligence
+            </a>
+
+            <a class="nav-item" href="#analytics">
+                <span>▥</span>
+                Analytics
+            </a>
+
+        </nav>
+
+
+        <div class="nav-section-title demo-title">
+            DEMO CONTROLS
+        </div>
+
+        <button class="sidebar-reset" onclick="resetDemo()">
+            ↻ Reset Demo
+        </button>
+
+
+        <div class="system-status">
+
+            <div class="system-row">
+                <span class="status-dot"></span>
+                Payment Gateway
+                <span class="online">ONLINE</span>
+            </div>
+
+            <div class="system-row">
+                <span class="status-dot"></span>
+                AI Risk Engine
+                <span class="online">ONLINE</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="topbar" id="overview">
+
+            <div>
+                <div class="eyebrow">
+                    PAYSHIELD AI / CONTROL CENTER
+                </div>
+
+                <h1>
+                    Merchant Risk Intelligence
+                </h1>
+
+                <p>
+                    Protect every payment. Prevent every avoidable loss.
+                </p>
+            </div>
+
+            <div class="gateway-status">
+                <span class="pulse"></span>
+                ALL SYSTEMS OPERATIONAL
+            </div>
+
+        </header>
+
+
+        <!-- ================= KPI CARDS ================= -->
+
+        <section class="kpi-grid">
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+                    <span>TRANSACTIONS</span>
+                    <span class="kpi-icon blue">↗</span>
+                </div>
+
+                <div class="kpi-value" id="totalTransactions">
+                    0
+                </div>
+
+                <div class="kpi-description">
+                    Payments screened by PayShield
+                </div>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+                    <span>HIGH-RISK BLOCKED</span>
+                    <span class="kpi-icon red">!</span>
+                </div>
+
+                <div class="kpi-value" id="blockedTransactions">
+                    0
+                </div>
+
+                <div class="kpi-description">
+                    Potentially dangerous payments stopped
+                </div>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+                    <span>EXPECTED LOSS</span>
+                    <span class="kpi-icon yellow">₹</span>
+                </div>
+
+                <div class="kpi-value" id="expectedLoss">
+                    ₹0
+                </div>
+
+                <div class="kpi-description">
+                    Estimated merchant exposure
+                </div>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <div class="kpi-top">
+                    <span>LOSS PREVENTED</span>
+                    <span class="kpi-icon green">✓</span>
+                </div>
+
+                <div class="kpi-value" id="lossPrevented">
+                    ₹0
+                </div>
+
+                <div class="kpi-description">
+                    Estimated protected value
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AUTONOMOUS AGENT ================= -->
+
+        <section class="panel agent-panel" id="agent">
+
+            <div class="panel-header">
+
+                <div class="section-title-group">
+
+                    <div class="agent-logo">
+                        ◈
+                    </div>
+
+                    <div>
+                        <div class="section-kicker">
+                            FEATURE 11 · AGENTIC RISK RESPONSE
+                        </div>
+
+                        <h2>
+                            Autonomous Risk Agent
+                        </h2>
+
+                        <p>
+                            Investigates risk, selects the least-disruptive
+                            action and learns from payment outcomes.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="agent-live">
+                    <span class="pulse green-pulse"></span>
+                    AGENT ACTIVE
+                </div>
+
+            </div>
+
+
+            <!-- AGENT TRACE -->
+
+            <div class="trace-container">
+
+                <div class="trace-title">
+                    DECISION TRACE
+                </div>
+
+                <div class="trace">
+
+                    <div class="trace-step active">
+                        <span>01</span>
+                        DETECT
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>02</span>
+                        INVESTIGATE
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>03</span>
+                        PREDICT
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>04</span>
+                        ASSESS
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>05</span>
+                        OPTIMIZE
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>06</span>
+                        ACT
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>07</span>
+                        OBSERVE
+                    </div>
+
+                    <div class="trace-arrow">→</div>
+
+                    <div class="trace-step active">
+                        <span>08</span>
+                        LEARN
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AGENT METRICS -->
+
+            <div class="agent-metrics">
+
+                <div class="agent-metric">
+                    <span>RISK SCORE</span>
+                    <strong id="agentRiskScore">—</strong>
+                    <small>/ 100</small>
+                </div>
+
+                <div class="agent-metric">
+                    <span>RISK LEVEL</span>
+                    <strong id="agentRiskLevel">WAITING</strong>
+                </div>
+
+                <div class="agent-metric">
+                    <span>EXPECTED LOSS</span>
+                    <strong id="agentExpectedLoss">—</strong>
+                </div>
+
+                <div class="agent-metric">
+                    <span>AI ACTION</span>
+                    <strong id="agentAction">—</strong>
+                </div>
+
+            </div>
+
+
+            <!-- AGENT RECOMMENDATION -->
+
+            <div class="agent-recommendation">
+
+                <div>
+                    <div class="recommendation-label">
+                        AUTONOMOUS RECOMMENDATION
+                    </div>
+
+                    <div class="recommendation-value"
+                         id="agentRecommendation">
+                        Waiting for transaction investigation...
+                    </div>
+                </div>
+
+                <button class="agent-button"
+                        onclick="toggleAgentChat()">
+                    ASK THE AGENT
+                </button>
+
+            </div>
+
+
+            <!-- ASK AGENT -->
+
+            <div class="agent-chat" id="agentChat">
+
+                <div class="chat-title">
+                    Risk Agent Interrogation
+                </div>
+
+                <div class="chat-buttons">
+
+                    <button onclick="askAgent('decision')">
+                        Why this decision?
+                    </button>
+
+                    <button onclick="askAgent('signals')">
+                        What signals caused the risk?
+                    </button>
+
+                    <button onclick="askAgent('loss')">
+                        Why is there merchant loss?
+                    </button>
+
+                    <button onclick="askAgent('action')">
+                        Why this action?
+                    </button>
+
+                    <button onclick="askAgent('learning')">
+                        How does the system learn?
+                    </button>
+
+                </div>
+
+                <div class="chat-answer" id="chatAnswer">
+                    Select a question to interrogate the risk agent.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INVESTIGATION ================= -->
+
+        <section class="two-column" id="investigation">
+
+            <div class="panel">
+
+                <div class="section-kicker">
+                    FEATURES 1 · 2 · 9 · 10
+                </div>
+
+                <h2>
+                    AI Risk Investigation
+                </h2>
+
+                <p class="section-description">
+                    Simulate an incoming payment and let PayShield
+                    investigate the transaction before authorization.
+                </p>
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label>
+                            CUSTOMER
+                        </label>
+
+                        <input
+                            id="customer"
+                            class="input"
+                            type="text"
+                            value="Vaishnavi"
+                            placeholder="Customer name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            PAYMENT AMOUNT
+                        </label>
+
+                        <div class="input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                id="amount"
+                                class="input amount-input"
+                                type="number"
+                                value="5000"
+                                min="1"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            DEVICE ID
+                        </label>
+
+                        <input
+                            id="deviceId"
+                            class="input"
+                            type="text"
+                            value="DEVICE_001"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label>
+                            ORDER ID
+                        </label>
+
+                        <input
+                            id="orderId"
+                            class="input"
+                            type="text"
+                            value="ORDER_001"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button class="primary-button"
+                            onclick="analyzeRisk()">
+                        <span>◈</span>
+                        Analyze Risk
+                    </button>
+
+                    <button class="secondary-button"
+                            onclick="processPayment()">
+                        Process Payment
+                    </button>
+
+                    <button class="danger-button"
+                            onclick="simulateMismatch()">
+                        Simulate Mismatch
+                    </button>
+
+                </div>
+
+
+                <!-- RESULT -->
+
+                <div class="risk-result" id="riskResult">
+
+                    <div class="result-top">
+
+                        <div>
+                            <span class="result-label">
+                                AI RISK SCORE
+                            </span>
+
+                            <div class="result-score"
+                                 id="resultScore">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="decision-badge"
+                             id="decisionBadge">
+                            WAITING
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-details">
+
+                        <div>
+                            <span>EXPECTED LOSS</span>
+                            <strong id="resultLoss">
+                                ₹0
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>RISK LEVEL</span>
+                            <strong id="resultLevel">
+                                —
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>AGENT ACTION</span>
+                            <strong id="resultAction">
+                                —
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="explanation-box">
+
+                        <div class="explanation-title">
+                            WHY PAYSHIELD MADE THIS DECISION
+                        </div>
+
+                        <ul id="riskReasons">
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RISK INTELLIGENCE -->
+
+            <div class="panel" id="intelligence">
+
+                <div class="section-kicker">
+                    FEATURES 3 · 4 · 5 · 6 · 7 · 8
+                </div>
+
+                <h2>
+                    Risk Intelligence
+                </h2>
+
+                <p class="section-description">
+                    Multiple signals combine to form the transaction
+                    risk profile.
+                </p>
+
+
+                <div class="signal-list">
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Behavioural Anomaly</span>
+                            <small>Feature 3</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="behaviourBar"></div>
+                        </div>
+
+                        <strong id="behaviourScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Velocity Attack</span>
+                            <small>Feature 4</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="velocityBar"></div>
+                        </div>
+
+                        <strong id="velocityScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Fraud Spike</span>
+                            <small>Feature 5</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="fraudBar"></div>
+                        </div>
+
+                        <strong id="fraudScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Chargeback Risk</span>
+                            <small>Feature 6</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="chargebackBar"></div>
+                        </div>
+
+                        <strong id="chargebackScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Return / Refund Risk</span>
+                            <small>Feature 7</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="refundBar"></div>
+                        </div>
+
+                        <strong id="refundScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Abuse Ring</span>
+                            <small>Feature 8</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="abuseBar"></div>
+                        </div>
+
+                        <strong id="abuseScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Payment Integrity</span>
+                            <small>Gateway verification</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="integrityBar"></div>
+                        </div>
+
+                        <strong id="integrityScore">0</strong>
+                    </div>
+
+
+                    <div class="signal-row">
+                        <div class="signal-info">
+                            <span>Duplicate Payment</span>
+                            <small>Transaction protection</small>
+                        </div>
+
+                        <div class="signal-bar">
+                            <div id="duplicateBar"></div>
+                        </div>
+
+                        <strong id="duplicateScore">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DECISION ENGINE ================= -->
+
+        <section class="panel" id="decision">
+
+            <div class="section-kicker">
+                FEATURE 9 · ADAPTIVE DECISION ENGINE
+            </div>
+
+            <h2>
+                Minimum-Friction Decision Engine
+            </h2>
+
+            <p class="section-description">
+                PayShield does not treat every risky payment the same.
+                It selects the least disruptive action appropriate to the risk.
+            </p>
+
+
+            <div class="decision-options">
+
+                <div class="decision-option allow">
+                    <div class="option-icon">✓</div>
+
+                    <div>
+                        <strong>ALLOW</strong>
+                        <p>
+                            Low risk · No customer friction
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="decision-option verify">
+                    <div class="option-icon">!</div>
+
+                    <div>
+                        <strong>VERIFY</strong>
+                        <p>
+                            Medium risk · Additional verification
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="decision-option review">
+                    <div class="option-icon">⌕</div>
+
+                    <div>
+                        <strong>REVIEW</strong>
+                        <p>
+                            High risk · Merchant review
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="decision-option block">
+                    <div class="option-icon">×</div>
+
+                    <div>
+                        <strong>BLOCK</strong>
+                        <p>
+                            Critical risk · Prevent merchant loss
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="decision-principle">
+
+                <div class="principle-icon">
+                    ⚖
+                </div>
+
+                <div>
+                    <strong>
+                        Core optimization principle
+                    </strong>
+
+                    <p>
+                        Maximum fraud prevention with minimum
+                        customer friction.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 15 FEATURES ================= -->
+
+        <section id="features">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-kicker">
+                        PAYSHIELD AI CAPABILITY MAP
+                    </div>
+
+                    <h2>
+                        15 Intelligence Features
+                    </h2>
+
+                    <p>
+                        A complete merchant-loss prevention layer
+                        surrounding the payment gateway.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <span class="feature-number">01</span>
+                    <div class="feature-icon">◉</div>
+                    <h3>Real-Time Risk Score</h3>
+                    <p>
+                        Scores every payment using multiple
+                        transaction and behavioural signals.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">02</span>
+                    <div class="feature-icon">₹</div>
+                    <h3>Merchant Loss Prediction</h3>
+                    <p>
+                        Estimates potential merchant exposure
+                        before the transaction is completed.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">03</span>
+                    <div class="feature-icon">⌁</div>
+                    <h3>Behavioural Anomaly</h3>
+                    <p>
+                        Detects unusual transaction behaviour
+                        compared with expected patterns.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">04</span>
+                    <div class="feature-icon">↯</div>
+                    <h3>Velocity Attack Detection</h3>
+                    <p>
+                        Identifies unusually frequent transaction
+                        activity within a short time window.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">05</span>
+                    <div class="feature-icon">⌁</div>
+                    <h3>Fraud-Spike Detection</h3>
+                    <p>
+                        Detects sudden increases in suspicious
+                        activity across recent transactions.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">06</span>
+                    <div class="feature-icon">↯</div>
+                    <h3>Chargeback Risk</h3>
+                    <p>
+                        Identifies transactions with elevated
+                        chargeback exposure.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">07</span>
+                    <div class="feature-icon">↩</div>
+                    <h3>Return / Refund Risk</h3>
+                    <p>
+                        Monitors patterns associated with refunds
+                        and merchant return losses.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">08</span>
+                    <div class="feature-icon">◎</div>
+                    <h3>Abuse-Ring Detection</h3>
+                    <p>
+                        Detects suspicious shared-device and
+                        network relationships across identities.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">09</span>
+                    <div class="feature-icon">◆</div>
+                    <h3>Adaptive Decision Engine</h3>
+                    <p>
+                        Selects allow, verify, review or block
+                        based on current risk.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">10</span>
+                    <div class="feature-icon">?</div>
+                    <h3>Explainable AI</h3>
+                    <p>
+                        Shows the risk factors and reasoning
+                        behind every decision.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card featured-card">
+                    <span class="feature-number">11</span>
+                    <div class="feature-icon">◈</div>
+                    <h3>Agentic Risk Response</h3>
+                    <p>
+                        Autonomous agent investigates, decides,
+                        acts and observes outcomes.
+                    </p>
+                    <span class="feature-status">CORE FEATURE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">12</span>
+                    <div class="feature-icon">↻</div>
+                    <h3>Recovery Agent</h3>
+                    <p>
+                        Responds to chargebacks and refund events
+                        with appropriate recovery actions.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">13</span>
+                    <div class="feature-icon">🧠</div>
+                    <h3>Continuous Learning</h3>
+                    <p>
+                        Uses observed outcomes and feedback to
+                        improve future risk decisions.
+                    </p>
+                    <span class="feature-status">FEEDBACK LOOP</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">14</span>
+                    <div class="feature-icon">⚖</div>
+                    <h3>False-Positive Optimizer</h3>
+                    <p>
+                        Balances fraud prevention against
+                        unnecessary customer friction.
+                    </p>
+                    <span class="feature-status">ACTIVE</span>
+                </div>
+
+
+                <div class="feature-card">
+                    <span class="feature-number">15</span>
+                    <div class="feature-icon">▥</div>
+                    <h3>Risk Dashboard & Analytics</h3>
+                    <p>
+                        Provides live merchant-level visibility
+                        into payment and risk performance.
+                    </p>
+                    <span class="feature-status">LIVE</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECOVERY ================= -->
+
+        <section class="two-column recovery-section" id="recovery">
+
+            <div class="panel">
+
+                <div class="section-kicker">
+                    FEATURE 12
+                </div>
+
+                <h2>
+                    Recovery Agent
+                </h2>
+
+                <p class="section-description">
+                    PayShield continues working after a payment event.
+                    It can respond to refunds and chargebacks.
+                </p>
+
+
+                <div class="recovery-flow">
+
+                    <div>
+                        <span>EVENT</span>
+                        <strong>Payment Outcome</strong>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div>
+                        <span>AGENT</span>
+                        <strong>Assess</strong>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div>
+                        <span>ACTION</span>
+                        <strong>Recover</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="recovery-actions">
+
+                    <button onclick="reportOutcome('chargeback')">
+                        Simulate Chargeback
+                    </button>
+
+                    <button onclick="reportOutcome('refund')">
+                        Simulate Refund
+                    </button>
+
+                    <button onclick="reportOutcome('legitimate')">
+                        Mark Legitimate
+                    </button>
+
+                </div>
+
+
+                <div id="recoveryMessage"
+                     class="recovery-message">
+                    No recovery event triggered.
+                </div>
+
+            </div>
+
+
+            <!-- CONTINUOUS LEARNING -->
+
+            <div class="panel">
+
+                <div class="section-kicker">
+                    FEATURE 13
+                </div>
+
+                <h2>
+                    Continuous Learning Loop
+                </h2>
+
+                <p class="section-description">
+                    Every outcome becomes feedback for the next
+                    decision cycle.
+                </p>
+
+
+                <div class="learning-loop">
+
+                    <div class="learning-step">
+                        <span>01</span>
+                        DECISION
+                    </div>
+
+                    <div>→</div>
+
+                    <div class="learning-step">
+                        <span>02</span>
+                        OUTCOME
+                    </div>
+
+                    <div>→</div>
+
+                    <div class="learning-step">
+                        <span>03</span>
+                        FEEDBACK
+                    </div>
+
+                    <div>→</div>
+
+                    <div class="learning-step">
+                        <span>04</span>
+                        LEARN
+                    </div>
+
+                    <div>→</div>
+
+                    <div class="learning-step">
+                        <span>05</span>
+                        ADAPT
+                    </div>
+
+                </div>
+
+
+                <div class="learning-note">
+                    <span>●</span>
+                    Outcome-driven risk feedback is enabled.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NETWORK ================= -->
+
+        <section class="panel" id="network">
+
+            <div class="section-kicker">
+                FEATURE 8 · NETWORK INTELLIGENCE
+            </div>
+
+            <h2>
+                Network & System Intelligence
+            </h2>
+
+            <p class="section-description">
+                PayShield looks beyond a single payment to identify
+                patterns across customers, devices and transaction activity.
+            </p>
+
+
+            <div class="network-grid">
+
+                <div class="network-card">
+
+                    <div class="network-icon">
+                        ◎
+                    </div>
+
+                    <div>
+                        <strong>
+                            Shared Device Detection
+                        </strong>
+
+                        <p>
+                            Multiple identities using the same device
+                            can indicate coordinated abuse.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="network-card">
+
+                    <div class="network-icon">
+                        ↯
+                    </div>
+
+                    <div>
+                        <strong>
+                            Velocity Monitoring
+                        </strong>
+
+                        <p>
+                            Rapid transaction bursts can reveal
+                            automated or coordinated attacks.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="network-card">
+
+                    <div class="network-icon">
+                        ◉
+                    </div>
+
+                    <div>
+                        <strong>
+                            Fraud Spike Monitoring
+                        </strong>
+
+                        <p>
+                            Sudden increases in suspicious behaviour
+                            are surfaced at the system level.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="network-card">
+
+                    <div class="network-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Payment Integrity
+                        </strong>
+
+                        <p>
+                            Gateway and simulated bank outcomes are
+                            compared to detect payment mismatches.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANALYTICS ================= -->
+
+        <section class="panel" id="analytics">
+
+            <div class="section-kicker">
+                FEATURE 15
+            </div>
+
+            <h2>
+                Risk Analytics
+            </h2>
+
+            <p class="section-description">
+                Live operational view of merchant payment protection.
+            </p>
+
+
+            <div class="analytics-grid">
+
+                <div class="analytics-card">
+                    <span>TOTAL VALUE</span>
+                    <strong id="totalValue">₹0</strong>
+                    <small>Payment volume</small>
+                </div>
+
+                <div class="analytics-card">
+                    <span>SUCCESSFUL</span>
+                    <strong id="successfulCount">0</strong>
+                    <small>Authorized payments</small>
+                </div>
+
+                <div class="analytics-card">
+                    <span>VERIFICATION</span>
+                    <strong id="verificationCount">0</strong>
+                    <small>Medium-risk payments</small>
+                </div>
+
+                <div class="analytics-card">
+                    <span>FAILED</span>
+                    <strong id="failedCount">0</strong>
+                    <small>Failed payments</small>
+                </div>
+
+                <div class="analytics-card">
+                    <span>PROTECTION RATE</span>
+                    <strong id="protectionRate">0%</strong>
+                    <small>Blocked / total</small>
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTION TABLE -->
+
+            <div class="table-title">
+                LIVE TRANSACTION ACTIVITY
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>PAYMENT</th>
+                        <th>CUSTOMER</th>
+                        <th>AMOUNT</th>
+                        <th>RISK</th>
+                        <th>DECISION</th>
+                        <th>STATUS</th>
+                        <th>TIME</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="transactionTable">
+
+                    <tr>
+                        <td colspan="7"
+                            class="empty-state">
+                            Waiting for transaction activity...
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div>
+                PayShield AI · Merchant Loss Prevention Platform
+            </div>
+
+            <div>
+                Synthetic payment environment · Virtual money only
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
