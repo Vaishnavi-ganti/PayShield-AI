@@ -1,0 +1,52 @@
+=================================================================
+PAYSHIELD AI — 10,000 TRANSACTION EVALUATION
+=================================================================
+
+DECISION DISTRIBUTION
+-----------------------------------------------------------------
+ALLOW     :  5431 (54.31%)
+VERIFY    :  2187 (21.87%)
+REVIEW    :  2072 (20.72%)
+BLOCK     :   310 (3.10%)
+
+MODEL PERFORMANCE
+-----------------------------------------------------------------
+Accuracy            : 97.91%
+Precision           : 97.92%
+Recall              : 97.52%
+F1 Score            : 97.72%
+False Positive Rate : 1.76%
+False Negative Rate : 2.48%
+
+CONFUSION MATRIX
+-----------------------------------------------------------------
+True Positives  : 4474
+True Negatives  : 5317
+False Positives : 95
+False Negatives : 114
+
+SCENARIO DETECTION
+-----------------------------------------------------------------
+abuse_ring             n= 478 avg_score= 65.90 intervention=100.00%
+behavioural_anomaly    n= 711 avg_score= 44.47 intervention=100.00%
+chargeback_risk        n= 670 avg_score= 66.26 intervention=100.00%
+duplicate_payment      n= 414 avg_score= 43.23 intervention=100.00%
+fraud_spike            n= 617 avg_score= 66.52 intervention=100.00%
+integrity_issue        n= 310 avg_score= 67.34 intervention=100.00%
+mixed_attack           n= 307 avg_score= 96.37 intervention=100.00%
+normal                 n=5431 avg_score= 14.79 intervention=  0.00%
+refund_abuse           n= 454 avg_score= 43.65 intervention=100.00%
+velocity_attack        n= 608 avg_score= 43.88 intervention=100.00%
+
+MERCHANT LOSS SIMULATION
+-----------------------------------------------------------------
+Loss without AI : ₹12,219,012.19
+Loss with AI    : ₹4,539,715.07
+Loss prevented  : ₹7,724,225.97
+FP cost         : ₹44,928.84
+Prevention rate : 63.21%
+
+NOTE
+-----------------------------------------------------------------
+Synthetic benchmark using PayShield's production risk weights and decision thresholds.
+Merchant-loss figures are prototype simulation estimates, not real financial results.
